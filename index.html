@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Tareas</title>
+    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <title>Convertidor de Monedas</title>
 </head>
 <body>
     <section>
-        <h1>Lista de tareas</h1>
-        <hr>
-        <div id="divTarea">
-            <h4>Nueva Tarea</h4>
-            <div>
-                <input type="text" value="" id="inputTarea" placeholder="Ingresar Nueva Tarea">
-                <button id="btnAgregar">Agregar</button>
-            </div>
-            <div id="divInfo">
-                <div id="divInfoMostrar">
-                    <p id="pTotal">Total: <span id="spanTotal">0</span></p>
-                    <p id="pRealizada">Realizadas: <span id="spanRealizadas">0</span></p>
-                </div>
-                <div id="divList">
-                    <tr>
-                     <h4>ID</h4><h4>Tareas</h4>
-                </div>
-            </div>
+        <h1>Conversor de monedas nacionales</h1><hr>
+        <div id="divContenedor">
+            <h3>Pesos CLP</h3>
+            <input type="number" id="EntradaPCLP" placeholder="Ingrese el monto en Pesos Chilenos">
+            <h4>Moneda a convertir</h4>
+            <select id="seleccionmoneda">
+                <option value="">Seleccione Tipo Moneda</option>
+            </select>
+            <button id="btnConvertir">Convertir</button>
+            <h4><span id="spanTotal">...</span></h4>
+        </div>
+        <div id="divGrafico">
+            <canvas id="myChart" width="500px"></canvas>
         </div>
     </section>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
